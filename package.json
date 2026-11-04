@@ -1,0 +1,12 @@
+{
+  "name": "pizzapoint-pwa",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Статическое PWA-приложение PizzaPoint",
+  "scripts": {
+    "test": "node --test tests/core.test.cjs tests/app.test.cjs tests/service-worker.test.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

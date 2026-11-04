@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200">
+<defs><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".18"/></filter></defs>
+<rect width="240" height="200" rx="24" fill="#FFF0E8"/>
+<g filter="url(#s)"><ellipse cx="120" cy="112" rx="82" ry="72" fill="#D99A42"/><ellipse cx="120" cy="106" rx="73" ry="64" fill="#FFD166"/><ellipse cx="120" cy="104" rx="66" ry="57" fill="#F4A261"/><circle cx="95" cy="75" r="9" fill="#6B2D1A"/><circle cx="135" cy="90" r="8" fill="#B23A48"/><circle cx="115" cy="120" r="10" fill="#588157"/><circle cx="75" cy="115" r="7" fill="#6B2D1A"/><circle cx="145" cy="135" r="8" fill="#B23A48"/><circle cx="90" cy="150" r="9" fill="#588157"/><circle cx="160" cy="105" r="6" fill="#6B2D1A"/><circle cx="120" cy="60" r="7" fill="#B23A48"/><path d="M105 53l15 53 28-46" stroke="#FFF4D6" stroke-width="4" fill="none" opacity=".75"/></g>
+<text x="120" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#3B2F2F">Барбекю</text>
+</svg>

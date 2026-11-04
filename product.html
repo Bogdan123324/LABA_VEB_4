@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#e74836">
+  <meta name="description" content="PizzaPoint — пицца на ваш вкус: меню, любимые сочетания, доставка и заказы в одном приложении.">
+  <meta property="og:title" content="Ваша пицца — PizzaPoint">
+  <meta property="og:description" content="Тонкое тесто, щедрая начинка и ещё один повод собраться.">
+  <meta property="og:type" content="website">
+  <title>Ваша пицца — PizzaPoint</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/brand.svg">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/core.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="product.html" class="has-purchase-bar">
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<div class="network-banner" role="status" data-offline-banner hidden><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#wifi-off"></use></svg><span>Вы офлайн. Меню и корзина доступны.</span><a href="offline.html">Подробнее</a></div>
+<header class="app-header">
+  <div class="app-header__inner">
+    <a class="brand" href="index.html" aria-label="PizzaPoint — на главную"><img src="assets/icons/brand.svg" width="38" height="38" alt=""><span>pizza<span class="brand__accent">point</span><small>горячо. вкусно. рядом.</small></span></a>
+    <button class="address-button" type="button" data-open-address><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#pin"></use></svg><span><small>Доставим к вам</small><strong data-address>Укажите адрес доставки</strong></span><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#down"></use></svg></button>
+    <a class="delivery-chip" href="delivery-map.html"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#clock"></use></svg><span><strong>35–45 мин</strong><small>Бесплатно от 1 500 ₽</small></span></a>
+    <div class="header-actions"><a class="icon-button" href="favorites.html" aria-label="Избранное"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#heart"></use></svg><span class="tiny-dot" data-favorite-dot hidden></span></a><a class="avatar-button" href="profile.html" aria-label="Мой профиль"><span data-initial>Б</span></a></div>
+  </div>
+</header>
+<main id="main" class="app-main ">
+<a class="back-link" href="products.html"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#back"></use></svg>В меню</a><div data-product-view></div>
+</main>
+<footer class="app-footer"><a href="contacts.html">Контакты</a><a href="delivery-map.html">Доставка</a><a href="team.html">Команда</a><a href="coming-soon.html">Скоро в меню</a><span>© PizzaPoint, 2026</span></footer>
+<nav class="bottom-nav" aria-label="Основная навигация"><a class="bottom-nav__link " href="index.html"><span class="bottom-nav__icon"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#home"></use></svg></span><span>Главная</span></a>
+<a class="bottom-nav__link bottom-nav__link--active" href="products.html" aria-current="page"><span class="bottom-nav__icon"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#pizza"></use></svg></span><span>Меню</span></a>
+<a class="bottom-nav__link " href="cart.html"><span class="bottom-nav__icon"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#cart"></use></svg><span class="nav-badge" data-cart-count hidden>0</span></span><span>Корзина</span></a>
+<a class="bottom-nav__link " href="orders.html"><span class="bottom-nav__icon"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#orders"></use></svg></span><span>Заказы</span></a>
+<a class="bottom-nav__link " href="profile.html"><span class="bottom-nav__icon"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#user"></use></svg></span><span>Профиль</span></a>
+</nav>
+<aside class="install-banner" data-install-banner hidden aria-label="Установка приложения"><img src="assets/icons/brand.svg" alt="" width="42" height="42"><div><strong>Любимая пицца — ближе</strong><p>Добавьте PizzaPoint на главный экран</p></div><button class="button button--small button--primary" type="button" data-install>Установить</button><button class="close-button" type="button" aria-label="Закрыть предложение установки" data-dismiss-install><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#close"></use></svg></button></aside>
+<div class="toast" role="status" aria-live="polite" data-toast hidden></div>
+<dialog class="modal" id="address-dialog" aria-labelledby="address-title">
+  <button class="close-button modal__close" type="button" aria-label="Закрыть окно адреса" data-close-dialog><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#close"></use></svg></button>
+  <span class="eyebrow">Горячая пицца по вашему адресу</span><h2 id="address-title">Куда доставим?</h2><p class="muted">Сохраним адрес для следующего заказа.</p>
+  <form class="form" data-address-form><label class="field"><span>Адрес доставки</span><input class="input" name="address" required minlength="5" maxlength="180" autocomplete="street-address" placeholder="Улица, дом, квартира"></label><button class="button button--primary button--full" type="submit">Сохранить адрес<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#check"></use></svg></button></form>
+  <a class="text-link modal__link" href="delivery-map.html">Посмотреть зону доставки<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#arrow"></use></svg></a>
+</dialog>
+<dialog class="modal" id="profile-dialog" aria-labelledby="profile-title">
+  <button class="close-button modal__close" type="button" aria-label="Закрыть редактирование профиля" data-close-dialog><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#close"></use></svg></button><span class="eyebrow">Ваш PizzaPoint</span><h2 id="profile-title">Личные данные</h2>
+  <form class="form" data-profile-form><label class="field"><span>Имя</span><input class="input" name="name" required minlength="2" maxlength="50" autocomplete="given-name"></label><label class="field"><span>Телефон</span><input class="input" name="phone" type="tel" maxlength="22" autocomplete="tel" placeholder="+7 999 000-00-00"></label><label class="field"><span>Адрес доставки</span><input class="input" name="address" maxlength="180" autocomplete="street-address" placeholder="Улица, дом, квартира"></label><button class="button button--primary button--full" type="submit">Сохранить изменения<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#check"></use></svg></button></form>
+</dialog>
+<dialog class="modal story-modal" id="story-dialog" aria-label="Отзыв гостя"><button class="close-button modal__close" type="button" aria-label="Закрыть отзыв" data-close-dialog><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#close"></use></svg></button><div data-story-content></div><div class="story-modal__nav"><button class="text-link" type="button" data-story-prev><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#back"></use></svg>Предыдущий</button><button class="text-link" type="button" data-story-next>Следующий<svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#arrow"></use></svg></button></div></dialog>
+<dialog class="modal" id="install-dialog" aria-labelledby="install-title"><button class="close-button modal__close" type="button" aria-label="Закрыть инструкцию установки" data-close-dialog><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#close"></use></svg></button><div class="empty-state__icon"><svg class="icon " aria-hidden="true" focusable="false"><use href="assets/icons/ui.svg#download"></use></svg></div><h2 id="install-title">PizzaPoint как приложение</h2><p class="muted" data-install-instructions>Откройте меню браузера и выберите «Установить приложение» или «Добавить на главный экран».</p><button class="button button--primary button--full" type="button" data-close-dialog>Понятно</button></dialog>
+<noscript><p class="noscript">Включите JavaScript, чтобы выбирать пиццу, пользоваться корзиной и сохранять заказы.</p></noscript>
+</body>
+</html>
